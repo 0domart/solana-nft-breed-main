@@ -1,0 +1,257 @@
+html, body {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+body {
+  background-color: rgb(43, 43, 43);
+}
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  font-size: calc(10px + 2vmin);
+  color: white;
+  padding: 30px 30px;
+  text-align: center;
+  font-family: cursive!important;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+.main {
+  background-color: rgb(43, 43, 43);
+}
+
+.nft-card {
+  overflow: hidden;
+  background-color: transparent;
+  border: 0;
+}
+
+.card-body {
+  margin-top: 2vh;
+    width: 100%;
+    height: 60vh;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title {
+  z-index: 3;
+  font-size: 1.25rem;
+  text-align: center;
+  font-family: Impact!important;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+  color: white;
+}
+
+.card-body button {
+  z-index: 3;
+  margin-top: 10px;
+}
+
+.card-body .form-select, .card-text {
+  width: 64%;
+  z-index: 3;
+}
+
+.card-text {
+  color: white;
+}
+
+.card-bg {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+.card-selected-img {
+  margin-top: 70px;
+  width: 64%;
+  height: 45%;
+  border: 1px solid grey;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+.nft-card .card-header {
+  border: 0;
+  background-color: transparent;
+  color: white;
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: fantasy!important;
+  font-weight: 400;
+  line-height: 1.334;
+  letter-spacing: 0em;
+}
+
+.nft-button {
+  border: 0;
+  width: 120px;
+  position: absolute;
+  margin-top: -15px;
+  font-size: 10px;
+  border-radius: 10px;
+  padding: 5px;
+  background: rgb(31, 31, 31);
+  color: #878787;
+  font-weight: 400;
+  transform: translate(-50%, 0%);
+}
+
+.header {
+  display: flex;
+  padding: 20px;
+  margin: 0;
+}
+
+.space {
+  flex: 1;
+}
+
+.header .pannel {
+  padding: 10px;
+  margin: 0;
+}
+
+.header.connected .wallet-adapter-button-trigger{
+  background-color: orangered !important;
+}
+
+.btn-claim {
+  border: solid 2px #878787;
+  border-radius: 10px;
+  text-transform: uppercase;
+  height: 100%;
+}
+
+.btn-claim.mobile {
+  width: 100%;
+  height: 50px;
+}
+
+.mobile-panel {
+  width: 100%;
+  margin: 0;
+}
+
+.pendding-rewards {
+  color: #878787;
+  text-transform: uppercase;
+  margin-right: 20px;
+}
+
+#loading {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -75px;
+  margin-left: -75px;
+  text-align: center;
+  font-size: 2em;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  border: 0.25rem solid rgba(136, 136, 136, 0.788);
+  border-top-color: white;
+  animation: spin 1s infinite linear;
+}
+
+.btn-mobile-menu, .btn-globe {
+  padding: 10px;
+  border-radius: 50%;
+  background-color: orangered;
+  width: 50px;
+  height: 50px;
+}
+
+.btn-globe svg {
+  width: 100%;
+  height: 100%;
+}
+
+.mobile-menu {
+    position: absolute;
+    z-index: 99;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-row-gap: 10px;
+    padding: 10px;
+    bottom: 130%;
+    left: 15px;
+    margin: 0;
+    list-style: none;
+    background: #2c2d30;
+    border-radius: 10px;
+    box-shadow: 0px 8px 20px rgb(0 0 0 / 60%);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 200ms ease, transform 200ms ease, visibility 200ms;
+}
+
+.mobile-menu-active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(10px);
+}
+
+.mobile-menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    white-space: nowrap;
+    box-sizing: border-box;
+    /* padding: 0 20px; */
+    width: 100%;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 50px;
+    color: white;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

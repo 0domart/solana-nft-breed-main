@@ -1,0 +1,218 @@
+{
+  "version": "0.1.0",
+  "name": "nft_breed",
+  "instructions": [
+    {
+      "name": "initialize",
+      "accounts": [
+        {
+          "name": "authority",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "breedFeeTokenMint",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "breedFeeTokenVault",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "breedSigner",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "breed",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "nonce",
+          "type": "u8"
+        },
+        {
+          "name": "feeAmount",
+          "type": "u64"
+        }
+      ]
+    },
+    {
+      "name": "createChild",
+      "accounts": [
+        {
+          "name": "breed",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "feeDepositor",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "breedFeeTokenVault",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "nft1",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "nft2",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "family1",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "family2",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "family3",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "child",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "childReceiver",
+          "isMut": true,
+          "isSigner": false
+        },
+        {
+          "name": "breedSigner",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "owner",
+          "isMut": false,
+          "isSigner": true
+        },
+        {
+          "name": "tokenProgram",
+          "isMut": false,
+          "isSigner": false
+        },
+        {
+          "name": "systemProgram",
+          "isMut": false,
+          "isSigner": false
+        }
+      ],
+      "args": [
+        {
+          "name": "f1Nonce",
+          "type": "u8"
+        },
+        {
+          "name": "f2Nonce",
+          "type": "u8"
+        },
+        {
+          "name": "f3Nonce",
+          "type": "u8"
+        }
+      ]
+    }
+  ],
+  "accounts": [
+    {
+      "name": "Breed",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "authority",
+            "type": "publicKey"
+          },
+          {
+            "name": "breedFeeTokenMint",
+            "type": "publicKey"
+          },
+          {
+            "name": "breedFeeTokenVault",
+            "type": "publicKey"
+          },
+          {
+            "name": "feeAmount",
+            "type": "u64"
+          },
+          {
+            "name": "nonce",
+            "type": "u8"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Family",
+      "type": {
+        "kind": "struct",
+        "fields": [
+          {
+            "name": "father",
+            "type": "publicKey"
+          },
+          {
+            "name": "mother",
+            "type": "publicKey"
+          },
+          {
+            "name": "child",
+            "type": "publicKey"
+          },
+          {
+            "name": "owner",
+            "type": "publicKey"
+          },
+          {
+            "name": "nonce",
+            "type": "u8"
+          }
+        ]
+      }
+    }
+  ],
+  "errors": [
+    {
+      "code": 6000,
+      "name": "UsedAlreadyBreed",
+      "msg": "Used already breed nft."
+    },
+    {
+      "code": 6001,
+      "name": "FeeNotEnough",
+      "msg": "Breed fee is not enough."
+    }
+  ],
+  "metadata": {
+    "address": "5RYcKgfCqf2N2yAp1HTu2k3URtmNxwkwjgVeULtKdRoU"
+  }
+}
